@@ -1,4 +1,4 @@
-git remote add GitHubMyContribOrigin https://github.com/didier-mycontrib/mod_uml_mda.git
+git remote add GitHubMyContribOrigin https://github.com/didier-mycontrib/mod-uml-mda.git
 REM didier-mycontrib / gh14.....sm..x / didier@d-defrance.fr
 git push -u GitHubMyContribOrigin master
 pause
