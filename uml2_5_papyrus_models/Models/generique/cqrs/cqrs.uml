@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001"
+ xmlns:xmi="http://www.omg.org/spec/XMI/20131001" 
+ xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" 
+  xmi:id="_RY9VIA34EeWYGJ-q6g22Xg" name="model_CQRS">
+  <packageImport xmi:id="_RY9VIQ34EeWYGJ-q6g22Xg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Model" xmi:id="_XW-ywA34EeWYGJ-q6g22Xg" name="logicalView" visibility="private">
+    <packagedElement xmi:type="uml:Package" xmi:id="_wMJ_wA38EeWYGJ-q6g22Xg" name="interfaceSeparationOnly">
+      <ownedComment xmi:id="_sOLOoA35EeWYGJ-q6g22Xg" annotatedElement="_lY0V0A34EeWYGJ-q6g22Xg">
+        <body>interface pour&#xD;
+Mise à jour , &#xD;
+suppression,&#xD;
+ajout</body>
+      </ownedComment>
+      <ownedComment xmi:id="_O4094A38EeWYGJ-q6g22Xg">
+        <body>Au minimum: séparer interface en lecture seule et interface en Modification&#xD;
+--> bonne pratique (sécurité , habilitations , ...)</body>
+      </ownedComment>
+      <ownedComment xmi:id="_Iv7tAA38EeWYGJ-q6g22Xg">
+        <body>ou bien (variante):</body>
+      </ownedComment>
+      <ownedComment xmi:id="_y4wa0A36EeWYGJ-q6g22Xg" annotatedElement="_Hw9OMA36EeWYGJ-q6g22Xg">
+        <body>interface en lecture/ecriture&#xD;
+héritant de l'interface en lecture</body>
+      </ownedComment>
+      <ownedComment xmi:id="_nGaDkA35EeWYGJ-q6g22Xg" annotatedElement="_jC3yIA34EeWYGJ-q6g22Xg">
+        <ownedComment xmi:id="_roB0oA35EeWYGJ-q6g22Xg">
+          <body>searchXyByCriteria1</body>
+        </ownedComment>
+        <body>interface en lecture seule</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_2YvTQA37EeWYGJ-q6g22Xg" name="EventuelleFacadeRW">
+        <ownedOperation xmi:id="_5vDu0A37EeWYGJ-q6g22Xg" name="getAccesManageXY"/>
+        <ownedOperation xmi:id="_AvkkMA38EeWYGJ-q6g22Xg" name="getAccesManageZz"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TxBRUA37EeWYGJ-q6g22Xg" name="EventuelleFacadeQuery">
+        <ownedOperation xmi:id="_ZlDFcA37EeWYGJ-q6g22Xg" name="getAccesQueryXy"/>
+        <ownedOperation xmi:id="_c41xcA37EeWYGJ-q6g22Xg" name="getAccesQueryZz"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_yI4dEA36EeWYGJ-q6g22Xg" name="Abstraction1" supplier="_i7lzgA36EeWYGJ-q6g22Xg" client="_i7lzgA36EeWYGJ-q6g22Xg"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_S1ZMAA36EeWYGJ-q6g22Xg" name="DataType1"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_jC3yIA34EeWYGJ-q6g22Xg" name="QueryXY">
+        <ownedOperation xmi:id="_G-GDUA35EeWYGJ-q6g22Xg" name="searchXyById"/>
+        <ownedOperation xmi:id="_JpWvsA35EeWYGJ-q6g22Xg" name="searchXyByCriteria1"/>
+        <ownedOperation xmi:id="_RwNiEA35EeWYGJ-q6g22Xg" name="searchXyByCriteria2"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gi03QA34EeWYGJ-q6g22Xg" name="ServiceXyImpl" clientDependency="_9NmZoA34EeWYGJ-q6g22Xg _-CDVYA34EeWYGJ-q6g22Xg">
+        <interfaceRealization xmi:id="_9NmZoA34EeWYGJ-q6g22Xg" name="InterfaceRealization1" supplier="_jC3yIA34EeWYGJ-q6g22Xg" client="_gi03QA34EeWYGJ-q6g22Xg" contract="_jC3yIA34EeWYGJ-q6g22Xg"/>
+        <interfaceRealization xmi:id="_-CDVYA34EeWYGJ-q6g22Xg" name="InterfaceRealization2" supplier="_lY0V0A34EeWYGJ-q6g22Xg" client="_gi03QA34EeWYGJ-q6g22Xg" contract="_lY0V0A34EeWYGJ-q6g22Xg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_95A4sA35EeWYGJ-q6g22Xg" name="QueryZz">
+        <ownedOperation xmi:id="_CLZT4A36EeWYGJ-q6g22Xg" name="searchZz"/>
+        <ownedOperation xmi:id="_DxDqIA36EeWYGJ-q6g22Xg" name="searchZzByCriteria"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_lY0V0A34EeWYGJ-q6g22Xg" name="ManageXy">
+        <ownedOperation xmi:id="_X0exoA35EeWYGJ-q6g22Xg" name="updateXy"/>
+        <ownedOperation xmi:id="_ZuQ9wA35EeWYGJ-q6g22Xg" name="deleteXy"/>
+        <ownedOperation xmi:id="_bwqTUA35EeWYGJ-q6g22Xg" name="createXy"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Hw9OMA36EeWYGJ-q6g22Xg" name="ManageZz">
+        <generalization xmi:id="_eeogAA36EeWYGJ-q6g22Xg" general="_95A4sA35EeWYGJ-q6g22Xg"/>
+        <ownedOperation xmi:id="_Mz0EEA36EeWYGJ-q6g22Xg" name="saveOrUpdateZz"/>
+        <ownedOperation xmi:id="_PCmP0A36EeWYGJ-q6g22Xg" name="deleteZz"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_i7lzgA36EeWYGJ-q6g22Xg" name="ServiceZzImpl" clientDependency="_tR11oA36EeWYGJ-q6g22Xg _yI4dEA36EeWYGJ-q6g22Xg">
+        <interfaceRealization xmi:id="_tR11oA36EeWYGJ-q6g22Xg" name="InterfaceRealization1" supplier="_Hw9OMA36EeWYGJ-q6g22Xg" client="_i7lzgA36EeWYGJ-q6g22Xg" contract="_Hw9OMA36EeWYGJ-q6g22Xg"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DU4kIA39EeWYGJ-q6g22Xg" name="basic_cqrs">
+      <ownedComment xmi:id="_Ap1asA4fEeWYGJ-q6g22Xg" annotatedElement="_ouKWoA4cEeWYGJ-q6g22Xg">
+        <body>actionToExecute = intention de la demande de modification&#xD;
+( update ou delete ou insert ou specifique (ex: virement))</body>
+      </ownedComment>
+      <ownedComment xmi:id="_lq7SUA4gEeWRWcf-wVncHA" annotatedElement="_ouKWoA4cEeWYGJ-q6g22Xg">
+        <body> objets &quot;Command&quot;(s) traités de manière asynchrone</body>
+      </ownedComment>
+      <ownedComment xmi:id="_CIbNsA4hEeWRWcf-wVncHA" annotatedElement="_lJAYYA4dEeWYGJ-q6g22Xg">
+        <body>Réponse asynchrone&#xD;
+(objet notification avec corrélation ) &#xD;
+ou bien éventuellement &#xD;
+statut retourné au sein &#xD;
+d'une copie de la commande originelle</body>
+      </ownedComment>
+      <ownedComment xmi:id="_bPfYwA4hEeWRWcf-wVncHA" annotatedElement="_SLE8UA39EeWYGJ-q6g22Xg">
+        <body>traitements ultra-fins , &#xD;
+ultra-rapides (ex: SQL direct / jdbc ou ....)&#xD;
+(ou bien Node-js + Mongo-DB)</body>
+      </ownedComment>
+      <ownedComment xmi:id="_wgf4QA4hEeWRWcf-wVncHA">
+        <body>BusinessRules</body>
+      </ownedComment>
+      <ownedComment xmi:id="_TpvS4A4iEeWRWcf-wVncHA" annotatedElement="_bt8H8A4kEeWRWcf-wVncHA _JgWk4A4eEeWYGJ-q6g22Xg">
+        <body>pleins de variantes envisageables&#xD;
+(classiques/simples/synchrones&#xD;
+ ou complexes/évoluées/asynchrones)</body>
+      </ownedComment>
+      <ownedComment xmi:id="_7aLiIA4iEeWRWcf-wVncHA" annotatedElement="_PuuOoA39EeWYGJ-q6g22Xg">
+        <body>eventuellement vu&#xD;
+comme service &quot;REST&quot;&#xD;
+avec mode &quot;GET&quot;</body>
+      </ownedComment>
+      <ownedComment xmi:id="_Dt658A4jEeWRWcf-wVncHA" annotatedElement="_WKxT8A4cEeWYGJ-q6g22Xg">
+        <body>java&#xD;
+ou&#xD;
+Xml&#xD;
+ou&#xD;
+JSON&#xD;
+ou &#xD;
+...</body>
+      </ownedComment>
+      <ownedComment xmi:id="_WMsiYA4jEeWRWcf-wVncHA" annotatedElement="_-pmZkA4kEeWRWcf-wVncHA">
+        <body>éventuellement vu/adapté&#xD;
+comme service REST&#xD;
+en modes &quot;POST&quot; , &#xD;
+&quot;DELETE&quot; ou &quot;PUT&quot; </body>
+      </ownedComment>
+      <ownedComment xmi:id="_PWxFAA4mEeWRWcf-wVncHA" annotatedElement="_bt8H8A4kEeWRWcf-wVncHA">
+        <body>Exemples:&#xD;
+Technos JEE&#xD;
+classiques:&#xD;
+Spring ou EJB,&#xD;
+JPA, ...</body>
+      </ownedComment>
+      <ownedComment xmi:id="_ccch0A4mEeWRWcf-wVncHA" annotatedElement="_yPDzMA4eEeWYGJ-q6g22Xg _SLE8UA39EeWYGJ-q6g22Xg">
+        <body>En arrière plan &#xD;
+--> soit une seule base ,&#xD;
+soit synchronisation &#xD;
+(éventuellement avec léger différé)&#xD;
+entre plusieurs bases</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_PuuOoA39EeWYGJ-q6g22Xg" name="QueryXyz">
+        <ownedOperation xmi:id="_eDzFsA4cEeWYGJ-q6g22Xg" name="searchXyById">
+          <ownedParameter xmi:id="_fwvIoA4cEeWYGJ-q6g22Xg" type="_WKxT8A4cEeWYGJ-q6g22Xg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_MY334A4jEeWRWcf-wVncHA" name="searchXyByCriteria"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_SLE8UA39EeWYGJ-q6g22Xg" name="ServiceQueryXyzImpl" clientDependency="_XRXgsA39EeWYGJ-q6g22Xg">
+        <interfaceRealization xmi:id="_XRXgsA39EeWYGJ-q6g22Xg" name="" supplier="_PuuOoA39EeWYGJ-q6g22Xg" client="_SLE8UA39EeWYGJ-q6g22Xg" contract="_PuuOoA39EeWYGJ-q6g22Xg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_WKxT8A4cEeWYGJ-q6g22Xg" name="ReadOnlyXyDto"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ouKWoA4cEeWYGJ-q6g22Xg" name="(Async)CommandMajZ1">
+        <ownedAttribute xmi:id="_xiFDUA4cEeWYGJ-q6g22Xg" name="contextP1"/>
+        <ownedAttribute xmi:id="_0MjskA4cEeWYGJ-q6g22Xg" name="contextP2"/>
+        <ownedAttribute xmi:id="_2bBIMA4cEeWYGJ-q6g22Xg" name="actionToExcecute"/>
+        <ownedAttribute xmi:id="_6UetEA4cEeWYGJ-q6g22Xg" name="data_a_to_update"/>
+        <ownedAttribute xmi:id="_9zHXIA4cEeWYGJ-q6g22Xg" name="data_b_to_update"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_QSYu0A4dEeWYGJ-q6g22Xg" name="CommandHandler" isAbstract="true">
+        <ownedOperation xmi:id="_YX7SkA4dEeWYGJ-q6g22Xg" name="handleCommand" isAbstract="true"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lJAYYA4dEeWYGJ-q6g22Xg" name="AsyncReply">
+        <ownedAttribute xmi:id="_r-3c8A4dEeWYGJ-q6g22Xg" name="status"/>
+        <ownedAttribute xmi:id="_45MlYA4dEeWYGJ-q6g22Xg" name="message"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JgWk4A4eEeWYGJ-q6g22Xg" name="CommandHandlerZ1" clientDependency="_ub74IA4kEeWRWcf-wVncHA">
+        <generalization xmi:id="_X8SC8A4eEeWYGJ-q6g22Xg" general="_QSYu0A4dEeWYGJ-q6g22Xg"/>
+        <ownedOperation xmi:id="_TdRhAA4eEeWYGJ-q6g22Xg" name="handleCommandMajZ1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LIN6kA4eEeWYGJ-q6g22Xg" name="PrimitiveType1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_nMjvEA4eEeWYGJ-q6g22Xg" name="DomainEntities"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_yPDzMA4eEeWYGJ-q6g22Xg" name="DAO_for_persistence" clientDependency="_Ol6zsA4iEeWRWcf-wVncHA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_vNfYQA4hEeWRWcf-wVncHA" name="Transactions"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_zg6VQA4hEeWRWcf-wVncHA" name="BusinessRules"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_6LQtYA4hEeWRWcf-wVncHA" name="BusinessLogic"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_AvDKgA4iEeWRWcf-wVncHA" name="Dependency1" supplier="_vNfYQA4hEeWRWcf-wVncHA" client="_bt8H8A4kEeWRWcf-wVncHA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_BIY3kA4iEeWRWcf-wVncHA" name="Dependency2" supplier="_nMjvEA4eEeWYGJ-q6g22Xg" client="_bt8H8A4kEeWRWcf-wVncHA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_BghqwA4iEeWRWcf-wVncHA" name="Dependency3" supplier="_zg6VQA4hEeWRWcf-wVncHA" client="_bt8H8A4kEeWRWcf-wVncHA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_DdaOMA4iEeWRWcf-wVncHA" name="Dependency4" supplier="_6LQtYA4hEeWRWcf-wVncHA" client="_bt8H8A4kEeWRWcf-wVncHA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Efk10A4iEeWRWcf-wVncHA" name="Dependency5" supplier="_yPDzMA4eEeWYGJ-q6g22Xg" client="_bt8H8A4kEeWRWcf-wVncHA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Ol6zsA4iEeWRWcf-wVncHA" name="Dependency6" supplier="_nMjvEA4eEeWYGJ-q6g22Xg" client="_yPDzMA4eEeWYGJ-q6g22Xg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bt8H8A4kEeWRWcf-wVncHA" name="InternalServiceXy" clientDependency="_DdaOMA4iEeWRWcf-wVncHA _Efk10A4iEeWRWcf-wVncHA _BghqwA4iEeWRWcf-wVncHA _BIY3kA4iEeWRWcf-wVncHA _AvDKgA4iEeWRWcf-wVncHA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ub74IA4kEeWRWcf-wVncHA" name="Dependency7" supplier="_bt8H8A4kEeWRWcf-wVncHA" client="_JgWk4A4eEeWYGJ-q6g22Xg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-pmZkA4kEeWRWcf-wVncHA" name="MyRestZzService">
+        <ownedAttribute xmi:id="_MY2X0A4lEeWRWcf-wVncHA" name="commandHandlerZ1" type="_JgWk4A4eEeWYGJ-q6g22Xg" aggregation="composite" association="_MY2X0w4lEeWRWcf-wVncHA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MY2X0Q4lEeWRWcf-wVncHA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MY2X0g4lEeWRWcf-wVncHA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_bKPvkA4lEeWRWcf-wVncHA" name="commandHandlerZ2" type="_XaxNIA4lEeWRWcf-wVncHA" aggregation="composite" association="_bKPvkw4lEeWRWcf-wVncHA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bKPvkQ4lEeWRWcf-wVncHA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bKPvkg4lEeWRWcf-wVncHA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_MY2X0w4lEeWRWcf-wVncHA" name="myRestZzService_commandHandlerZ1_1" memberEnd="_MY2X1A4lEeWRWcf-wVncHA _MY2X0A4lEeWRWcf-wVncHA">
+        <ownedEnd xmi:id="_MY2X1A4lEeWRWcf-wVncHA" name="myRestZzService" type="_-pmZkA4kEeWRWcf-wVncHA" association="_MY2X0w4lEeWRWcf-wVncHA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MY2X1Q4lEeWRWcf-wVncHA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MY2X1g4lEeWRWcf-wVncHA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_XaxNIA4lEeWRWcf-wVncHA" name="CommandHandlerZ2">
+        <ownedOperation xmi:id="_4dtpoA4lEeWRWcf-wVncHA" name="handleCmdeZ2"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_bKPvkw4lEeWRWcf-wVncHA" name="myRestZzService_commandHandlerZ2_1" memberEnd="_bKPvlA4lEeWRWcf-wVncHA _bKPvkA4lEeWRWcf-wVncHA">
+        <ownedEnd xmi:id="_bKPvlA4lEeWRWcf-wVncHA" name="myRestZzService" type="_-pmZkA4kEeWRWcf-wVncHA" association="_bKPvkw4lEeWRWcf-wVncHA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bKPvlQ4lEeWRWcf-wVncHA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bKPvlg4lEeWRWcf-wVncHA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_l-hugCEcEeOT_fjNFFfTPw" name="Model" visibility="private">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_l-hugSEcEeOT_fjNFFfTPw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Model" xmi:id="_xOIagCEcEeOT_fjNFFfTPw" name="LogicalView" visibility="private">
+    <packagedElement xmi:type="uml:Package" xmi:id="_-3FuECEdEeOT_fjNFFfTPw" name="Package1">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_AVx5oCEeEeOT_fjNFFfTPw" name="Dependency1" client="_-3FuECEdEeOT_fjNFFfTPw" supplier="__VGfwCEdEeOT_fjNFFfTPw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="__VGfwCEdEeOT_fjNFFfTPw" name="Package2"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Yvsc8J_WEeWjueYRQtzlJA" name="Voiture">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_abHc8J_WEeWjueYRQtzlJA" name="Port1" aggregation="composite"/>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_jQZbkJ_WEeWjueYRQtzlJA" name="Connector1">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_jQgJQJ_WEeWjueYRQtzlJA" role="_abHc8J_WEeWjueYRQtzlJA"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_jQgwUJ_WEeWjueYRQtzlJA" role="_fJR1MJ_WEeWjueYRQtzlJA"/>
+      </ownedConnector>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_cANygJ_WEeWjueYRQtzlJA" name="Moteur">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_fJR1MJ_WEeWjueYRQtzlJA" name="Port1" aggregation="composite"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_g9Vz0J_WEeWjueYRQtzlJA" name="Class1"/>
+      </nestedClassifier>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_07nY4CEcEeOT_fjNFFfTPw" name="UseCaseView" visibility="private">
+    <packagedElement xmi:type="uml:Model" xmi:id="_7DJ-4CEcEeOT_fjNFFfTPw" name="context" visibility="private">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_V1nUwCEdEeOT_fjNFFfTPw">
+        <body>système/application à modéliser/développer</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_aJPGECEdEeOT_fjNFFfTPw">
+        <body>Acteur &quot;......&quot;&#xD;
+     --> interaction 1&#xD;
+     --> interaction2</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_ffupoCEdEeOT_fjNFFfTPw">
+        <body>Acteur &quot;.....&quot;&#xD;
+    -->interaction a&#xD;
+   --> interaction b</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_kJ55wCEdEeOT_fjNFFfTPw">
+        <body> Acteur (logiciel externe) &quot;....&quot;&#xD;
+              interaction x --></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_1QBGICEdEeOT_fjNFFfTPw" name="Actor1"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_2js7kCEdEeOT_fjNFFfTPw" name="Actor2"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_4OBvYCEdEeOT_fjNFFfTPw" name="UseCase1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6ZhWkCEdEeOT_fjNFFfTPw" name="A_actor1_usecase1" memberEnd="_6ZhWkSEdEeOT_fjNFFfTPw _6ZhWlCEdEeOT_fjNFFfTPw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6ZhWkSEdEeOT_fjNFFfTPw" name="actor1" type="_1QBGICEdEeOT_fjNFFfTPw" association="_6ZhWkCEdEeOT_fjNFFfTPw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6ZhWkyEdEeOT_fjNFFfTPw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6ZhWkiEdEeOT_fjNFFfTPw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6ZhWlCEdEeOT_fjNFFfTPw" name="usecase1" type="_4OBvYCEdEeOT_fjNFFfTPw" association="_6ZhWkCEdEeOT_fjNFFfTPw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6ZhWliEdEeOT_fjNFFfTPw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6ZhWlSEdEeOT_fjNFFfTPw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Rjp88J15EeWSGpqxe9v7kw" name="Message"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_4ONLACEcEeOT_fjNFFfTPw" name="DeploymentView" visibility="private">
+    <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_LjaPsCEeEeOT_fjNFFfTPw" name="Serveur1"/>
+    <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_O0gNACEeEeOT_fjNFFfTPw" name="Serveur2"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_qELN4CEfEeOT_fjNFFfTPw" name="GuiView" visibility="private">
+    <packagedElement xmi:type="uml:Class" xmi:id="_vvE7MCEfEeOT_fjNFFfTPw" name="IHM" isAbstract="true"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_VCKyAJ0HEeWQW4YCBz-17Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VCKyAZ0HEeWQW4YCBz-17Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateXml" name="myAcceleoUmlGen">
     <property name="ECLIPSE_HOME" value="../../../../../Prog/UML/MarsPapyrus/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../.."/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../UML_WKSP/my_uml2_5_papyrus_models_wksp"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="myAcceleoUmlGen.libraryclasspath">

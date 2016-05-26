@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ntiers="http:///schemas/ntiers/_QoIX0GI8EeWHCesthmrMSg/25" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ntiers/_QoIX0GI8EeWHCesthmrMSg/25 ../../profiles/n-tiers.profile.uml#_QoIX0WI8EeWHCesthmrMSg">
+  <uml:Model xmi:id="_l-hugCEcEeOT_fjNFFfTPw" name="Model" visibility="private">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_62xe0GOwEeWHLZH9647bFQ" annotatedElement="_0eHX0GOpEeWHLZH9647bFQ _Y1OsEGOwEeWHLZH9647bFQ">
+      <body> pour paramétrer la génération de code via acceléo / M2T</body>
+    </ownedComment>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_l-hugSEcEeOT_fjNFFfTPw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Model" xmi:id="_xOIagCEcEeOT_fjNFFfTPw" name="LogicalView" visibility="private">
+      <packagedElement xmi:type="uml:Package" xmi:id="_-3FuECEdEeOT_fjNFFfTPw" name="devises">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_8NRVsBDEEeWIjMMeW0HwNQ" annotatedElement="_gQZ6QBBYEeWIjMMeW0HwNQ">
+          <body>adapteur &quot;REST&quot;&#xD;
+avec&#xD;
+@GET , @Path(&quot;fin_url&quot;) et&#xD;
+@Produces(&quot;application/json&quot;)</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_jZXhwBDFEeWIjMMeW0HwNQ">
+          <body>Modèle UML ---> code java annoté avec JAX-WS (@WebService) ---> description WSDL&#xD;
+Modèle UML ---> code java annoté avec JAX-RS (@GET , @Path , ....) ---> description Api REST en YAML (swagger ou RAML)&#xD;
+ou bien ... ou bien&#xD;
+Modèle UML --- (via MDA/acceleo et template WSDL) ---> génération directe d'un contrat WSDL ---> codes &quot;client&quot; et &quot;serveur&quot;</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_WhwqQGFjEeWKLIuoxUTgNw" annotatedElement="_OsiNwA_-EeWIjMMeW0HwNQ">
+          <body>ok uml vers wsdl</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_beIdoGFjEeWKLIuoxUTgNw" annotatedElement="_BeQOkA_-EeWIjMMeW0HwNQ">
+          <body>bug temporaire&#xD;
+uml vers wsdl&#xD;
+(utilWS.mtl à améliorer)</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_CrT84GFmEeWKLIuoxUTgNw" annotatedElement="_dncBkGFlEeWKLIuoxUTgNw">
+          <body>Struture de données retournée par le service REST&#xD;
+C'est une REPRESENTATION du resultat de la CONVERSION&#xD;
+UML --> java ---> Json et/ou Xml</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_PPmUAA_9EeWIjMMeW0HwNQ" name="Devise">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_pBXo8A_9EeWIjMMeW0HwNQ" name="monnaie">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rUosEA_9EeWIjMMeW0HwNQ" name="dChange" type="_FK5NgBAAEeWIjMMeW0HwNQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_9pLacA_9EeWIjMMeW0HwNQ" name="codeDevise">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_VUKegA_9EeWIjMMeW0HwNQ" name="Pays">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ee8zEA_9EeWIjMMeW0HwNQ" name="devise" type="_PPmUAA_9EeWIjMMeW0HwNQ" association="_ee8zEw_9EeWIjMMeW0HwNQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ee8zEg_9EeWIjMMeW0HwNQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ee8zEQ_9EeWIjMMeW0HwNQ" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_1iMFMA_9EeWIjMMeW0HwNQ" name="nom">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_3JyVIA_9EeWIjMMeW0HwNQ" name="capitale">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_4thYwA_9EeWIjMMeW0HwNQ" name="codePays">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_9MzS4JKTEeWCCIdyJIGzWA" name="superficie" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Bz6n8JKUEeWCCIdyJIGzWA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_B0EY8JKUEeWCCIdyJIGzWA" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_ee8zEw_9EeWIjMMeW0HwNQ" name="pays_devise_1" memberEnd="_ee8zFA_9EeWIjMMeW0HwNQ _ee8zEA_9EeWIjMMeW0HwNQ">
+          <ownedEnd xmi:type="uml:Property" xmi:id="_ee8zFA_9EeWIjMMeW0HwNQ" name="pays" type="_VUKegA_9EeWIjMMeW0HwNQ" association="_ee8zEw_9EeWIjMMeW0HwNQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ee8zFg_9EeWIjMMeW0HwNQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ee8zFQ_9EeWIjMMeW0HwNQ" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_BeQOkA_-EeWIjMMeW0HwNQ" name="GestionDevises">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_i8AiUA__EeWIjMMeW0HwNQ" name="mettreAjourDevise">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_fZcr0BBSEeWIjMMeW0HwNQ" name="devise" type="_PPmUAA_9EeWIjMMeW0HwNQ"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OsiNwA_-EeWIjMMeW0HwNQ" name="ConsultationDevises">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_m-lm8A__EeWIjMMeW0HwNQ" name="convertir">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_URlmkBBSEeWIjMMeW0HwNQ" name="montant" type="_FK5NgBAAEeWIjMMeW0HwNQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_WWjH8BBSEeWIjMMeW0HwNQ" name="codeDeviseSource">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Xp2i4BBSEeWIjMMeW0HwNQ" name="codeDeviseCible">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZH7DYBBSEeWIjMMeW0HwNQ" type="_FK5NgBAAEeWIjMMeW0HwNQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5ri0sBBUEeWIjMMeW0HwNQ" name="rechercherDevisePourPays">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_bB4cYBBXEeWIjMMeW0HwNQ" type="_PPmUAA_9EeWIjMMeW0HwNQ" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_1YiAABBXEeWIjMMeW0HwNQ" name="codePays">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_dZG6cA__EeWIjMMeW0HwNQ" name="rechercherDevise">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_PAIUABBSEeWIjMMeW0HwNQ" name="codeDevise">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Rk1scBBSEeWIjMMeW0HwNQ" type="_PPmUAA_9EeWIjMMeW0HwNQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_tq01cA__EeWIjMMeW0HwNQ" name="Dependency1" client="_OsiNwA_-EeWIjMMeW0HwNQ" supplier="_PPmUAA_9EeWIjMMeW0HwNQ"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_u5XFIA__EeWIjMMeW0HwNQ" name="Dependency2" client="_BeQOkA_-EeWIjMMeW0HwNQ" supplier="_PPmUAA_9EeWIjMMeW0HwNQ"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_W5VSoBBXEeWIjMMeW0HwNQ" name="Dependency3" client="_OsiNwA_-EeWIjMMeW0HwNQ" supplier="_VUKegA_9EeWIjMMeW0HwNQ"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_28uWoBBXEeWIjMMeW0HwNQ" name="List&lt;Pays>"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gQZ6QBBYEeWIjMMeW0HwNQ" name="ConsultationDevisesViaREST">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_p2S-YBDEEeWIjMMeW0HwNQ" name="rechercherDeviseViaRest">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_cXKh8GFkEeWKLIuoxUTgNw" type="_PPmUAA_9EeWIjMMeW0HwNQ" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_li-KMGFkEeWKLIuoxUTgNw" name="codeDevise">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_s_F7UBDEEeWIjMMeW0HwNQ" name="conversionViaRest">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_uJMZIGFkEeWKLIuoxUTgNw" name="montant" type="_FK5NgBAAEeWIjMMeW0HwNQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6lVJsGFkEeWKLIuoxUTgNw" name="codeDevSource">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_-rOoEGFkEeWKLIuoxUTgNw" name="codeDevCible">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iZrokGFlEeWKLIuoxUTgNw" type="_dncBkGFlEeWKLIuoxUTgNw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_mfZzIBBYEeWIjMMeW0HwNQ" name="Dependency4" client="_gQZ6QBBYEeWIjMMeW0HwNQ" supplier="_OsiNwA_-EeWIjMMeW0HwNQ"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_dncBkGFlEeWKLIuoxUTgNw" name="ResConversion">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kWt9AGFlEeWKLIuoxUTgNw" name="montantAConvertir" type="_FK5NgBAAEeWIjMMeW0HwNQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_n39PIGFlEeWKLIuoxUTgNw" name="monnaieSource">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_qEexEGFlEeWKLIuoxUTgNw" name="monnaieCible">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rsKgkGFlEeWKLIuoxUTgNw" name="montantConverti" type="_FK5NgBAAEeWIjMMeW0HwNQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_wh6ukGFlEeWKLIuoxUTgNw" name="dateConversion" type="_eNw1EBAAEeWIjMMeW0HwNQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="__VGfwCEdEeOT_fjNFFfTPw" name="abonnements">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Vp-AQBDKEeWIjMMeW0HwNQ">
+          <body>Remarque importante:&#xD;
+------------------------&#xD;
+Au sein de cette (petite) modélisation UML de l'application fonctionnelle &quot;deviseApp&quot; ,&#xD;
+ l'abonnement à certains services exposés est directement géré par l'application.&#xD;
+ Dans la plupart des cas (dans une infrastructure d'entreprise  , hors tp) , l'abonnement&#xD;
+ aux services exposés sera géré de manière &quot;technique&quot; au niveau d'un serveur intermédiaire (ex: ESB).</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gsqyYA_-EeWIjMMeW0HwNQ" name="Abonnement">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_3pX-sA_-EeWIjMMeW0HwNQ" name="date_debut" type="_eNw1EBAAEeWIjMMeW0HwNQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_6R9KgA_-EeWIjMMeW0HwNQ" name="date_fin" type="_eNw1EBAAEeWIjMMeW0HwNQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-mIVcA_-EeWIjMMeW0HwNQ" name="compteAbonnement" type="_kltggA_-EeWIjMMeW0HwNQ" association="_-mIVcw_-EeWIjMMeW0HwNQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-mIVcg_-EeWIjMMeW0HwNQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-mIVcQ_-EeWIjMMeW0HwNQ" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_EfD3sA__EeWIjMMeW0HwNQ" name="servicesAutorises">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iWKGYBDHEeWIjMMeW0HwNQ" name="num_abonnement">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kltggA_-EeWIjMMeW0HwNQ" name="CompteAbonnement">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_oi9ZMA_-EeWIjMMeW0HwNQ" name="username">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ps4OoA_-EeWIjMMeW0HwNQ" name="password">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_r1s8UA_-EeWIjMMeW0HwNQ" name="email">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_jbgogBBREeWIjMMeW0HwNQ" name="adresse" type="_Oz2oABBREeWIjMMeW0HwNQ" association="_jbgogxBREeWIjMMeW0HwNQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jbgoghBREeWIjMMeW0HwNQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jbgogRBREeWIjMMeW0HwNQ" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_-mIVcw_-EeWIjMMeW0HwNQ" name="abonnement_compteAbonnement_1" memberEnd="_-mIVdA_-EeWIjMMeW0HwNQ _-mIVcA_-EeWIjMMeW0HwNQ">
+          <ownedEnd xmi:type="uml:Property" xmi:id="_-mIVdA_-EeWIjMMeW0HwNQ" name="abonnement" type="_gsqyYA_-EeWIjMMeW0HwNQ" association="_-mIVcw_-EeWIjMMeW0HwNQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-mIVdg_-EeWIjMMeW0HwNQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-mIVdQ_-EeWIjMMeW0HwNQ" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_l7wbgBAAEeWIjMMeW0HwNQ" name="GestionAbonnement">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_7aDBoBDHEeWIjMMeW0HwNQ" name="creerAbonnement">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_be43IBDIEeWIjMMeW0HwNQ" name="ab" type="_gsqyYA_-EeWIjMMeW0HwNQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_lKBfsBDIEeWIjMMeW0HwNQ" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_OTKcsBDIEeWIjMMeW0HwNQ" name="rechercherAbonnement">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_c8NJsBDIEeWIjMMeW0HwNQ" type="_gsqyYA_-EeWIjMMeW0HwNQ" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_nk4_oBDIEeWIjMMeW0HwNQ" name="numAb">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Qz-zoBDIEeWIjMMeW0HwNQ" name="majAbonnement">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_hqKGkBDIEeWIjMMeW0HwNQ" name="ab" type="_gsqyYA_-EeWIjMMeW0HwNQ"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ogkhoBAAEeWIjMMeW0HwNQ" name="ServiceHabilitations">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_uL6zcBDHEeWIjMMeW0HwNQ" name="verifAuth">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_HPEu4BDIEeWIjMMeW0HwNQ" name="userName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_IYuekBDIEeWIjMMeW0HwNQ" name="password">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_KxNY4BDIEeWIjMMeW0HwNQ" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_pb_rMBDIEeWIjMMeW0HwNQ" name="verifDroitsAcces">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_xY20EBDIEeWIjMMeW0HwNQ" name="userName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_yqhQQBDIEeWIjMMeW0HwNQ" name="serviceName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_sJsyIBDJEeWIjMMeW0HwNQ" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_jbgogxBREeWIjMMeW0HwNQ" name="compteAbonnement_adresse_1" memberEnd="_jbgohBBREeWIjMMeW0HwNQ _jbgogBBREeWIjMMeW0HwNQ">
+          <ownedEnd xmi:type="uml:Property" xmi:id="_jbgohBBREeWIjMMeW0HwNQ" name="compteAbonnement" type="_kltggA_-EeWIjMMeW0HwNQ" association="_jbgogxBREeWIjMMeW0HwNQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jbgohhBREeWIjMMeW0HwNQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jbgohRBREeWIjMMeW0HwNQ" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_pHod0BBREeWIjMMeW0HwNQ" name="Dependency1" client="_l7wbgBAAEeWIjMMeW0HwNQ" supplier="_gsqyYA_-EeWIjMMeW0HwNQ"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_p_XXEBBREeWIjMMeW0HwNQ" name="Dependency2" client="_ogkhoBAAEeWIjMMeW0HwNQ" supplier="_gsqyYA_-EeWIjMMeW0HwNQ"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_wkIEkBBREeWIjMMeW0HwNQ" name="Dependency3" client="__VGfwCEdEeOT_fjNFFfTPw" supplier="_BA4nYBBREeWIjMMeW0HwNQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_eNw1EBAAEeWIjMMeW0HwNQ" name="Date"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_BA4nYBBREeWIjMMeW0HwNQ" name="common">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_fr0qQBDLEeWIjMMeW0HwNQ">
+          <body>Ce package &quot;common&quot; au sens &quot;common basic&quot; comporte quelques &quot;sous sctuctures de données&quot; classiques et communes &#xD;
+que l'on pourra réutiliser par imbrication de façon à structurer des données échangées (données pivots) </body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Oz2oABBREeWIjMMeW0HwNQ" name="Adresse">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_STHkMBBREeWIjMMeW0HwNQ" name="rue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TY3EQBBREeWIjMMeW0HwNQ" name="codePostal">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Uu4cABBREeWIjMMeW0HwNQ" name="ville">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_FK5NgBAAEeWIjMMeW0HwNQ" name="Real"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_07nY4CEcEeOT_fjNFFfTPw" name="UseCaseView" visibility="private">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_oQLxIA-QEeWIjMMeW0HwNQ" annotatedElement="_assJ0A82EeWefdLPOQ8BxQ">
+        <body>évolution (future version):&#xD;
+Mise à jour (journalière) automatique&#xD;
+en relation avec la bourse</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Model" xmi:id="_7DJ-4CEcEeOT_fjNFFfTPw" name="context" visibility="private">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_V1nUwCEdEeOT_fjNFFfTPw">
+          <body>système/application à modéliser/développer (devisesApp)</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_aJPGECEdEeOT_fjNFFfTPw">
+          <body>Acteur &quot;internaute&quot;&#xD;
+     --> rechercher nom devise pour pays&#xD;
+     --> consulter liste de taux de change&#xD;
+     --> effectuer conversion devises</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ffupoCEdEeOT_fjNFFfTPw">
+          <body>Acteur &quot;Appli cliente&quot;&#xD;
+    -->déléguer conversion de devises&#xD;
+   --> déléguer recherche taux de change</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_kJ55wCEdEeOT_fjNFFfTPw">
+          <body>Acteur &quot;Gestionnaire&quot;&#xD;
+         --> mettre à jour devises et taux</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_1QBGICEdEeOT_fjNFFfTPw" name="Internaute"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_2js7kCEdEeOT_fjNFFfTPw" name="Appli_cliente"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_4OBvYCEdEeOT_fjNFFfTPw" name="Effectuer conversion devises">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ZUCfUA_7EeWIjMMeW0HwNQ">
+          <body>scénario nominal:&#xD;
+------------------&#xD;
+1. renseigner monnaie source et monnaie cible&#xD;
+2. renseigner montant à convertir&#xD;
+3. effectuer le calcul selon taux de change&#xD;
+4. retourner (et éventuellement afficher) la somme convertie&#xD;
+</body>
+        </ownedComment>
+        <extend xmi:type="uml:Extend" xmi:id="_vDToMA83EeWefdLPOQ8BxQ" extendedCase="_vU-ccA82EeWefdLPOQ8BxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_6ZhWkCEdEeOT_fjNFFfTPw" name="A_actor1_usecase1" memberEnd="_6ZhWkSEdEeOT_fjNFFfTPw _6ZhWlCEdEeOT_fjNFFfTPw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_6ZhWkSEdEeOT_fjNFFfTPw" name="actor1" type="_1QBGICEdEeOT_fjNFFfTPw" association="_6ZhWkCEdEeOT_fjNFFfTPw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6ZhWkyEdEeOT_fjNFFfTPw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6ZhWkiEdEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_6ZhWlCEdEeOT_fjNFFfTPw" name="usecase1" type="_4OBvYCEdEeOT_fjNFFfTPw" association="_6ZhWkCEdEeOT_fjNFFfTPw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6ZhWliEdEeOT_fjNFFfTPw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6ZhWlSEdEeOT_fjNFFfTPw" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_Cp6GQA82EeWefdLPOQ8BxQ" name="Gestionnaire"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_assJ0A82EeWefdLPOQ8BxQ" name="Mettre à jour taux et devises">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_uOo6UA-VEeWIjMMeW0HwNQ">
+          <body>scénario nominal:&#xD;
+------------------&#xD;
+1. sélectionner devise&#xD;
+2. renseigner valeur taux change&#xD;
+3. confirmer modification</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_rd3A8A82EeWefdLPOQ8BxQ" name="A_gestionnaire_mettre à jour taux et devises" memberEnd="_rd3A8Q82EeWefdLPOQ8BxQ _rd3A9A82EeWefdLPOQ8BxQ" navigableOwnedEnd="_rd3A9A82EeWefdLPOQ8BxQ">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_rd3A8Q82EeWefdLPOQ8BxQ" name="gestionnaire" type="_Cp6GQA82EeWefdLPOQ8BxQ" association="_rd3A8A82EeWefdLPOQ8BxQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rd3A8w82EeWefdLPOQ8BxQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rd3A8g82EeWefdLPOQ8BxQ" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_rd3A9A82EeWefdLPOQ8BxQ" name="mettre à jour taux et devises" type="_assJ0A82EeWefdLPOQ8BxQ" association="_rd3A8A82EeWefdLPOQ8BxQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rd3A9g82EeWefdLPOQ8BxQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rd3A9Q82EeWefdLPOQ8BxQ" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_vU-ccA82EeWefdLPOQ8BxQ" name="gérer consultation changes et/ou conversion"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_MJNc0A83EeWefdLPOQ8BxQ" name="rechercher nom de devise d'un pays" classifierBehavior="_wQ_bQBBTEeWIjMMeW0HwNQ">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_rq6A8BBTEeWIjMMeW0HwNQ">
+          <body>scénario nominal (principal):&#xD;
+-----------------------------&#xD;
+1. récupérer listePaysExistants&#xD;
+2. selectionner codePays&#xD;
+3. rechercherDevisePourPays&#xD;
+4. afficher devise</body>
+        </ownedComment>
+        <ownedBehavior xmi:type="uml:Interaction" xmi:id="_wQ_bQBBTEeWIjMMeW0HwNQ" name="recherche_devise_pour_pays">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_8llZYBBTEeWIjMMeW0HwNQ">
+            <body>scénario nominal (principal):&#xD;
+-----------------------------&#xD;
+1. récupérer listePaysExistants&#xD;
+2. selectionner codePays&#xD;
+3. rechercherDevisePourPays&#xD;
+4. afficher devise</body>
+          </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_SaVpsBBVEeWIjMMeW0HwNQ" annotatedElement="_8llZYBBTEeWIjMMeW0HwNQ">
+            <body>Ce diagramme de séquence est une retranscription du scénario rattaché&#xD;
+au use case &quot;rechercher devise pour pays&quot; (phase &quot;réalisation des uses cases&quot; de l'analyse applicative et dans SFD).&#xD;
+-------&#xD;
+En élaborant ce diagramme , les messages envoyés au service &quot;ConsultationDevises&quot;&#xD;
+constituent (par cohérence UML) de nouvelles opérations de la classe &quot;ConsultationDevises&quot; .</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_NnNuYBBUEeWIjMMeW0HwNQ" name="s" type="_OsiNwA_-EeWIjMMeW0HwNQ"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_-dIw4BBTEeWIjMMeW0HwNQ" name="Internaute" coveredBy="_aaS_UhBUEeWIjMMeW0HwNQ _aaS_VBBUEeWIjMMeW0HwNQ _aaS_UxBUEeWIjMMeW0HwNQ _e4mWoBBUEeWIjMMeW0HwNQ _ss6bEhBUEeWIjMMeW0HwNQ"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_B-WN0BBUEeWIjMMeW0HwNQ" name="IHM deviseApp" coveredBy="_e4mWohBUEeWIjMMeW0HwNQ _oxCbYhBUEeWIjMMeW0HwNQ _stEMERBUEeWIjMMeW0HwNQ _5r1vohBUEeWIjMMeW0HwNQ _AiQ04RBVEeWIjMMeW0HwNQ _AiQ04xBVEeWIjMMeW0HwNQ"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_LJcEYBBUEeWIjMMeW0HwNQ" name="s" represents="_NnNuYBBUEeWIjMMeW0HwNQ" coveredBy="_oxCbZBBUEeWIjMMeW0HwNQ _5r1vpBBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_aaS_UhBUEeWIjMMeW0HwNQ" name="ActionExecSpecStart" covered="_-dIw4BBTEeWIjMMeW0HwNQ" execution="_aaS_UxBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_aaS_UxBUEeWIjMMeW0HwNQ" name="ActionExecSpec" covered="_-dIw4BBTEeWIjMMeW0HwNQ" finish="_aaS_VBBUEeWIjMMeW0HwNQ" start="_aaS_UhBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_e4mWoBBUEeWIjMMeW0HwNQ" name="MessageSend" covered="_-dIw4BBTEeWIjMMeW0HwNQ" message="_e4TbsBBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_e4mWohBUEeWIjMMeW0HwNQ" name="MessageRecv" covered="_B-WN0BBUEeWIjMMeW0HwNQ" message="_e4TbsBBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ss6bEhBUEeWIjMMeW0HwNQ" name="MessageSend0" covered="_-dIw4BBTEeWIjMMeW0HwNQ" message="_ss6bEBBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_e4wHrBBUEeWIjMMeW0HwNQ" name="ActionExecSpec0Start" execution="_e4wHrRBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_aaS_VBBUEeWIjMMeW0HwNQ" name="ActionExecSpecFinish" covered="_-dIw4BBTEeWIjMMeW0HwNQ" execution="_aaS_UxBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_e4wHrRBUEeWIjMMeW0HwNQ" name="ActionExecSpec0" finish="_e4wHrhBUEeWIjMMeW0HwNQ" start="_e4wHrBBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_oxCbYhBUEeWIjMMeW0HwNQ" name="recupererListePays_MessageSend" covered="_B-WN0BBUEeWIjMMeW0HwNQ" message="_oxCbYBBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_e4wHrhBUEeWIjMMeW0HwNQ" name="ActionExecSpec0Finish" execution="_e4wHrRBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_oxCbZBBUEeWIjMMeW0HwNQ" name="recupererListePays_MessageRecv" covered="_LJcEYBBUEeWIjMMeW0HwNQ" message="_oxCbYBBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_stEMERBUEeWIjMMeW0HwNQ" name="MessageRecv0" covered="_B-WN0BBUEeWIjMMeW0HwNQ" message="_ss6bEBBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_oxCbcRBUEeWIjMMeW0HwNQ" name="ActionExecSpec1Start" execution="_oxCbchBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_oxCbchBUEeWIjMMeW0HwNQ" name="ActionExecSpec1" finish="_oxCbcxBUEeWIjMMeW0HwNQ" start="_oxCbcRBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_stEMHhBUEeWIjMMeW0HwNQ" name="ActionExecSpec2Start" execution="_stNWABBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_oxCbcxBUEeWIjMMeW0HwNQ" name="ActionExecSpec1Finish" execution="_oxCbchBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_stNWABBUEeWIjMMeW0HwNQ" name="ActionExecSpec2" finish="_stNWARBUEeWIjMMeW0HwNQ" start="_stEMHhBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5r1vohBUEeWIjMMeW0HwNQ" name="rechercherDevisePourPays_MessageSend" covered="_B-WN0BBUEeWIjMMeW0HwNQ" message="_5r1voBBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_AiQ04RBVEeWIjMMeW0HwNQ" name="MessageSend1" covered="_B-WN0BBUEeWIjMMeW0HwNQ" message="_AiHD4BBVEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5r1vpBBUEeWIjMMeW0HwNQ" name="rechercherDevisePourPays_MessageRecv" covered="_LJcEYBBUEeWIjMMeW0HwNQ" message="_5r1voBBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_5r1vsRBUEeWIjMMeW0HwNQ" name="ActionExecSpec3Start" execution="_5r1vshBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_AiQ04xBVEeWIjMMeW0HwNQ" name="MessageRecv1" covered="_B-WN0BBUEeWIjMMeW0HwNQ" message="_AiHD4BBVEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_AiQ08BBVEeWIjMMeW0HwNQ" name="ActionExecSpec4Start" execution="_AiZ-0BBVEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_5r1vshBUEeWIjMMeW0HwNQ" name="ActionExecSpec3" finish="_5r1vsxBUEeWIjMMeW0HwNQ" start="_5r1vsRBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_AiZ-0BBVEeWIjMMeW0HwNQ" name="ActionExecSpec4" finish="_AiZ-0RBVEeWIjMMeW0HwNQ" start="_AiQ08BBVEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_5r1vsxBUEeWIjMMeW0HwNQ" name="ActionExecSpec3Finish" execution="_5r1vshBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_stNWARBUEeWIjMMeW0HwNQ" name="ActionExecSpec2Finish" execution="_stNWABBUEeWIjMMeW0HwNQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_AiZ-0RBVEeWIjMMeW0HwNQ" name="ActionExecSpec4Finish" execution="_AiZ-0BBVEeWIjMMeW0HwNQ"/>
+          <message xmi:type="uml:Message" xmi:id="_e4TbsBBUEeWIjMMeW0HwNQ" name="rechercheParPays" receiveEvent="_e4mWohBUEeWIjMMeW0HwNQ" sendEvent="_e4mWoBBUEeWIjMMeW0HwNQ"/>
+          <message xmi:type="uml:Message" xmi:id="_oxCbYBBUEeWIjMMeW0HwNQ" name="recupererListePays_Message" receiveEvent="_oxCbZBBUEeWIjMMeW0HwNQ" sendEvent="_oxCbYhBUEeWIjMMeW0HwNQ"/>
+          <message xmi:type="uml:Message" xmi:id="_ss6bEBBUEeWIjMMeW0HwNQ" name="sélectionnerPays" receiveEvent="_stEMERBUEeWIjMMeW0HwNQ" sendEvent="_ss6bEhBUEeWIjMMeW0HwNQ"/>
+          <message xmi:type="uml:Message" xmi:id="_5r1voBBUEeWIjMMeW0HwNQ" name="rechercherDevisePourPays_Message" receiveEvent="_5r1vpBBUEeWIjMMeW0HwNQ" sendEvent="_5r1vohBUEeWIjMMeW0HwNQ"/>
+          <message xmi:type="uml:Message" xmi:id="_AiHD4BBVEeWIjMMeW0HwNQ" name="afficher devise" receiveEvent="_AiQ04xBVEeWIjMMeW0HwNQ" sendEvent="_AiQ04RBVEeWIjMMeW0HwNQ"/>
+        </ownedBehavior>
+        <extend xmi:type="uml:Extend" xmi:id="_n11U4A83EeWefdLPOQ8BxQ" extendedCase="_ZHS_EA-TEeWIjMMeW0HwNQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_brhUIA83EeWefdLPOQ8BxQ" name="rechercher taux de change d'une (ou plusieurs) devise(s)">
+        <extend xmi:type="uml:Extend" xmi:id="_PWwHgA-SEeWIjMMeW0HwNQ" extendedCase="_vU-ccA82EeWefdLPOQ8BxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_it6_4A83EeWefdLPOQ8BxQ" name="A_internaute_consultation taux et conversion depuis navigateur internet" memberEnd="_it6_4Q83EeWefdLPOQ8BxQ _it6_5A83EeWefdLPOQ8BxQ" navigableOwnedEnd="_it6_5A83EeWefdLPOQ8BxQ">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_it6_4Q83EeWefdLPOQ8BxQ" name="internaute" type="_1QBGICEdEeOT_fjNFFfTPw" association="_it6_4A83EeWefdLPOQ8BxQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_it6_4w83EeWefdLPOQ8BxQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_it6_4g83EeWefdLPOQ8BxQ" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_it6_5A83EeWefdLPOQ8BxQ" name="consultation taux et conversion depuis navigateur internet" type="_ZHS_EA-TEeWIjMMeW0HwNQ" association="_it6_4A83EeWefdLPOQ8BxQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_it6_5g83EeWefdLPOQ8BxQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_it6_5Q83EeWefdLPOQ8BxQ" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="__qITEA-QEeWIjMMeW0HwNQ" name="Administrateur de Appli_cliente"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_FsA9AA-REeWIjMMeW0HwNQ" name="initialiser l'abonnement  au service &quot;devises&quot;" classifierBehavior="_oNDiAA_7EeWIjMMeW0HwNQ">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_B9rc4A_7EeWIjMMeW0HwNQ">
+          <body>scénario nominal:&#xD;
+1. vérifier existance compte (username, ....)&#xD;
+2. créer si besoin un nouveau compte (username, ....)&#xD;
+3. mettre à jour si besoin le mot de passe.&#xD;
+4....</body>
+        </ownedComment>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_oNDiAA_7EeWIjMMeW0HwNQ" name="Activity1">
+          <edge xmi:type="uml:ControlFlow" xmi:id="_MVPRIA_8EeWIjMMeW0HwNQ" name="ControlFlow1" target="_375ZcA_7EeWIjMMeW0HwNQ" source="_tkeSoA_7EeWIjMMeW0HwNQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_MVPRIQ_8EeWIjMMeW0HwNQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_MVPRIg_8EeWIjMMeW0HwNQ"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_M8b0AA_8EeWIjMMeW0HwNQ" name="ControlFlow2" target="_vSghwA_7EeWIjMMeW0HwNQ" source="_375ZcA_7EeWIjMMeW0HwNQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_M8b0AQ_8EeWIjMMeW0HwNQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_M8b0Ag_8EeWIjMMeW0HwNQ"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_N0DYgA_8EeWIjMMeW0HwNQ" name="ControlFlow3" target="_1mbW4A_7EeWIjMMeW0HwNQ" source="_vSghwA_7EeWIjMMeW0HwNQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_N0DYgQ_8EeWIjMMeW0HwNQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_N0DYgg_8EeWIjMMeW0HwNQ"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_O20dEA_8EeWIjMMeW0HwNQ" name="ControlFlow4" target="_JcbQ8A_8EeWIjMMeW0HwNQ" source="_1mbW4A_7EeWIjMMeW0HwNQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_O29nAA_8EeWIjMMeW0HwNQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_O29nAQ_8EeWIjMMeW0HwNQ"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_PpyLEA_8EeWIjMMeW0HwNQ" name="ControlFlow5" target="_ughrMA_7EeWIjMMeW0HwNQ" source="_JcbQ8A_8EeWIjMMeW0HwNQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_PpyLEQ_8EeWIjMMeW0HwNQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_PpyLEg_8EeWIjMMeW0HwNQ"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_QmBJ0A_8EeWIjMMeW0HwNQ" name="ControlFlow6" target="_AtDtEA_8EeWIjMMeW0HwNQ" source="_vSghwA_7EeWIjMMeW0HwNQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_QmBJ0Q_8EeWIjMMeW0HwNQ" name=""/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_QmBJ0g_8EeWIjMMeW0HwNQ"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_Rw1XIA_8EeWIjMMeW0HwNQ" name="ControlFlow7" target="_JcbQ8A_8EeWIjMMeW0HwNQ" source="_AtDtEA_8EeWIjMMeW0HwNQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_Rw1XIQ_8EeWIjMMeW0HwNQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_Rw1XIg_8EeWIjMMeW0HwNQ"/>
+          </edge>
+          <node xmi:type="uml:InitialNode" xmi:id="_tkeSoA_7EeWIjMMeW0HwNQ" name="InitialNode1" outgoing="_MVPRIA_8EeWIjMMeW0HwNQ"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_ughrMA_7EeWIjMMeW0HwNQ" name="ActivityFinalNode1" incoming="_PpyLEA_8EeWIjMMeW0HwNQ"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_vSghwA_7EeWIjMMeW0HwNQ" name="DecisionNode1" incoming="_M8b0AA_8EeWIjMMeW0HwNQ" outgoing="_N0DYgA_8EeWIjMMeW0HwNQ _QmBJ0A_8EeWIjMMeW0HwNQ"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_1mbW4A_7EeWIjMMeW0HwNQ" name="créer nouveau compte (abonnement)" incoming="_N0DYgA_8EeWIjMMeW0HwNQ" outgoing="_O20dEA_8EeWIjMMeW0HwNQ"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_375ZcA_7EeWIjMMeW0HwNQ" name="compte existant (réabonnement) ?" incoming="_MVPRIA_8EeWIjMMeW0HwNQ" outgoing="_M8b0AA_8EeWIjMMeW0HwNQ"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_AtDtEA_8EeWIjMMeW0HwNQ" name="Mettre à jour le compte (abonnement)" incoming="_QmBJ0A_8EeWIjMMeW0HwNQ" outgoing="_Rw1XIA_8EeWIjMMeW0HwNQ"/>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_JcbQ8A_8EeWIjMMeW0HwNQ" name="...." incoming="_O20dEA_8EeWIjMMeW0HwNQ _Rw1XIA_8EeWIjMMeW0HwNQ" outgoing="_PpyLEA_8EeWIjMMeW0HwNQ"/>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_WdIw0A-REeWIjMMeW0HwNQ" name="A_administrateur de appli_cliente_initialiser l'abonnement  au service &quot;devises&quot;" memberEnd="_WdIw0Q-REeWIjMMeW0HwNQ _WdIw1A-REeWIjMMeW0HwNQ" navigableOwnedEnd="_WdIw1A-REeWIjMMeW0HwNQ">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_WdIw0Q-REeWIjMMeW0HwNQ" name="administrateur de appli_cliente" type="__qITEA-QEeWIjMMeW0HwNQ" association="_WdIw0A-REeWIjMMeW0HwNQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WdIw0w-REeWIjMMeW0HwNQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WdIw0g-REeWIjMMeW0HwNQ" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_WdIw1A-REeWIjMMeW0HwNQ" name="initialiser l'abonnement  au service &quot;devises&quot;" type="_FsA9AA-REeWIjMMeW0HwNQ" association="_WdIw0A-REeWIjMMeW0HwNQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WdIw1g-REeWIjMMeW0HwNQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WdIw1Q-REeWIjMMeW0HwNQ" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_j-jucA-REeWIjMMeW0HwNQ" name="via appels distants vers WS de &quot;deviseApp&quot;">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Ss_YoA-UEeWIjMMeW0HwNQ" general="_vU-ccA82EeWefdLPOQ8BxQ"/>
+        <include xmi:type="uml:Include" xmi:id="_kb7xgA-SEeWIjMMeW0HwNQ" addition="_b7yVYA-SEeWIjMMeW0HwNQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_AZihUA-SEeWIjMMeW0HwNQ" name="A_appli_cliente_déléguer conversions et recherches de changes vers ws &quot;devises&quot;" memberEnd="_AZihUQ-SEeWIjMMeW0HwNQ _AZihVA-SEeWIjMMeW0HwNQ" navigableOwnedEnd="_AZihVA-SEeWIjMMeW0HwNQ">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_AZihUQ-SEeWIjMMeW0HwNQ" name="appli_cliente" type="_2js7kCEdEeOT_fjNFFfTPw" association="_AZihUA-SEeWIjMMeW0HwNQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AZihUw-SEeWIjMMeW0HwNQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AZihUg-SEeWIjMMeW0HwNQ" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_AZihVA-SEeWIjMMeW0HwNQ" name="déléguer conversions et recherches de changes vers ws &quot;devises&quot;" type="_j-jucA-REeWIjMMeW0HwNQ" association="_AZihUA-SEeWIjMMeW0HwNQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AZihVg-SEeWIjMMeW0HwNQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AZihVQ-SEeWIjMMeW0HwNQ" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_b7yVYA-SEeWIjMMeW0HwNQ" name="vérifier validité abonnement au service"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_ZHS_EA-TEeWIjMMeW0HwNQ" name="directement via site Web de &quot;deviseApp&quot;">
+        <generalization xmi:type="uml:Generalization" xmi:id="_L6E6YA-UEeWIjMMeW0HwNQ" general="_vU-ccA82EeWefdLPOQ8BxQ"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_uO71QA-VEeWIjMMeW0HwNQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uPYhMA-VEeWIjMMeW0HwNQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://Papyrus.profile.uml#_vaU6ggEYEeCIz8iAxBJnfA"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://Papyrus.profile.uml#_H9068AEYEeCIz8iAxBJnfA"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_4ONLACEcEeOT_fjNFFfTPw" name="DeploymentView" visibility="private">
+      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_LjaPsCEeEeOT_fjNFFfTPw" name="Serveur1"/>
+      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_O0gNACEeEeOT_fjNFFfTPw" name="Serveur2"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_qELN4CEfEeOT_fjNFFfTPw" name="GuiView" visibility="private">
+      <packagedElement xmi:type="uml:Class" xmi:id="_vvE7MCEfEeOT_fjNFFfTPw" name="IHM" isAbstract="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0eHX0GOpEeWHLZH9647bFQ" name="AppConfig">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3lNroGOpEeWHLZH9647bFQ" name="appName" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6YnnYGOpEeWHLZH9647bFQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6YnnYWOpEeWHLZH9647bFQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_65HsYGOpEeWHLZH9647bFQ" name="domainName" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8C70IGOpEeWHLZH9647bFQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8C70IWOpEeWHLZH9647bFQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_E6IeUGOqEeWHLZH9647bFQ" name="databaseName" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HhErYGOqEeWHLZH9647bFQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HhErYWOqEeWHLZH9647bFQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Y1OsEGOwEeWHLZH9647bFQ" name="appConfig" classifier="_0eHX0GOpEeWHLZH9647bFQ">
+      <slot xmi:type="uml:Slot" xmi:id="_l_26UGOwEeWHLZH9647bFQ" definingFeature="_3lNroGOpEeWHLZH9647bFQ">
+        <value xmi:type="uml:LiteralString" xmi:id="_qYXLoGOwEeWHLZH9647bFQ" value="devises"/>
+      </slot>
+      <slot xmi:type="uml:Slot" xmi:id="_reiwkGOwEeWHLZH9647bFQ" definingFeature="_65HsYGOpEeWHLZH9647bFQ">
+        <value xmi:type="uml:LiteralString" xmi:id="_vyFCUGOwEeWHLZH9647bFQ" value="com.xy"/>
+      </slot>
+      <slot xmi:type="uml:Slot" xmi:id="_xl37MGOwEeWHLZH9647bFQ" definingFeature="_E6IeUGOqEeWHLZH9647bFQ">
+        <value xmi:type="uml:LiteralString" xmi:id="_3EkYgGOwEeWHLZH9647bFQ" value="deviseDB"/>
+      </slot>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_vrXeUBBWEeWIjMMeW0HwNQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vsQ2MBBWEeWIjMMeW0HwNQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../profiles/n-tiers.profile.uml#_QoIX0WI8EeWHCesthmrMSg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../../profiles/n-tiers.profile.uml#_QAvBgB6rEeOIL-VHpkBl1g"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_9c0YMmOpEeWHLZH9647bFQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XdP_QJ0FEeWQW4YCBz-17Q" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XdP_QZ0FEeWQW4YCBz-17Q" key="Version" value="0.1.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XdP_Qp0FEeWQW4YCBz-17Q" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XdP_Q50FEeWQW4YCBz-17Q" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XdP_RJ0FEeWQW4YCBz-17Q" key="Date" value="2015-01-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XdP_RZ0FEeWQW4YCBz-17Q" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9ewR4GOpEeWHLZH9647bFQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <ntiers:service xmi:id="_8muS8GODEeWNAZVYjP2wAQ" base_Class="_OsiNwA_-EeWIjMMeW0HwNQ"/>
+  <ntiers:id xmi:id="_8muS8WODEeWNAZVYjP2wAQ" base_Property="_9pLacA_9EeWIjMMeW0HwNQ"/>
+  <ntiers:id xmi:id="_8muS8mODEeWNAZVYjP2wAQ" base_Property="_4thYwA_9EeWIjMMeW0HwNQ"/>
+  <ntiers:service xmi:id="_8muS82ODEeWNAZVYjP2wAQ" base_Class="_BeQOkA_-EeWIjMMeW0HwNQ"/>
+  <ntiers:id xmi:id="_8muS9GODEeWNAZVYjP2wAQ" base_Property="_iWKGYBDHEeWIjMMeW0HwNQ"/>
+  <ntiers:id xmi:id="_8muS9WODEeWNAZVYjP2wAQ" base_Property="_oi9ZMA_-EeWIjMMeW0HwNQ"/>
+  <ntiers:service xmi:id="_8muS9mODEeWNAZVYjP2wAQ" base_Class="_l7wbgBAAEeWIjMMeW0HwNQ"/>
+  <ntiers:service xmi:id="_8muS92ODEeWNAZVYjP2wAQ" base_Class="_ogkhoBAAEeWIjMMeW0HwNQ"/>
+  <ntiers:config xmi:id="_F6E0MGOxEeWHLZH9647bFQ" base_InstanceSpecification="_Y1OsEGOwEeWHLZH9647bFQ"/>
+</xmi:XMI>

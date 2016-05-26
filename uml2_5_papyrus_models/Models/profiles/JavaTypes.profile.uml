@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001"
+ xmlns:xmi="http://www.omg.org/spec/XMI/20131001" 
+ xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" 
+ xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_zODEgGS4EeSO88P2ztulog" name="javaTypes">
+  <eAnnotations xmi:id="_BompkWS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_XeTVEGS6EeSO88P2ztulog" name="javaTypes" nsURI="http:///schemas/javaTypes/_XY8T8GS6EeSO88P2ztulog/5" nsPrefix="javaTypes">
+      <eAnnotations xmi:id="_XeTVH2S6EeSO88P2ztulog" source="PapyrusVersion">
+        <details xmi:id="_XeTVIGS6EeSO88P2ztulog" key="Version" value="0.0.6"/>
+        <details xmi:id="_XeTVIWS6EeSO88P2ztulog" key="Comment" value=""/>
+        <details xmi:id="_XeTVImS6EeSO88P2ztulog" key="Copyright" value=""/>
+        <details xmi:id="_XeTVI2S6EeSO88P2ztulog" key="Date" value="2014-11-05"/>
+        <details xmi:id="_XeTVJGS6EeSO88P2ztulog" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_XeTVEWS6EeSO88P2ztulog" name="int" instanceClassName="int">
+        <eAnnotations xmi:id="_XeTVEmS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_0wqGwGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_XeTVE2S6EeSO88P2ztulog" name="long" instanceClassName="long">
+        <eAnnotations xmi:id="_XeTVFGS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1oo3oGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_XeTVFWS6EeSO88P2ztulog" name="short" instanceClassName="short">
+        <eAnnotations xmi:id="_XeTVFmS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_2b9yAGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_XeTVF2S6EeSO88P2ztulog" name="double" instanceClassName="double">
+        <eAnnotations xmi:id="_XeTVGGS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_5Jo5MGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_XeTVGWS6EeSO88P2ztulog" name="float" instanceClassName="float">
+        <eAnnotations xmi:id="_XeTVGmS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_6Wl0gGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_XeTVG2S6EeSO88P2ztulog" name="boolean" instanceClassName="boolean">
+        <eAnnotations xmi:id="_XeTVHGS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__jNDUGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_XeTVHWS6EeSO88P2ztulog" name="PrimitiveType1" instanceClassName="PrimitiveType1">
+        <eAnnotations xmi:id="_XeTVHmS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lq7oUGS5EeSO88P2ztulog"/>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_RF6PoGS6EeSO88P2ztulog" name="javaTypes" nsURI="http:///schemas/javaTypes/_RAZdgGS6EeSO88P2ztulog/4" nsPrefix="javaTypes">
+      <eAnnotations xmi:id="_RF6Pr2S6EeSO88P2ztulog" source="PapyrusVersion">
+        <details xmi:id="_RF6PsGS6EeSO88P2ztulog" key="Version" value="0.0.5"/>
+        <details xmi:id="_RF6PsWS6EeSO88P2ztulog" key="Comment" value=""/>
+        <details xmi:id="_RF6PsmS6EeSO88P2ztulog" key="Copyright" value=""/>
+        <details xmi:id="_RF6Ps2S6EeSO88P2ztulog" key="Date" value="2014-11-05"/>
+        <details xmi:id="_RF6PtGS6EeSO88P2ztulog" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_RF6PoWS6EeSO88P2ztulog" name="int" instanceClassName="int">
+        <eAnnotations xmi:id="_RF6PomS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_0wqGwGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_RF6Po2S6EeSO88P2ztulog" name="long" instanceClassName="long">
+        <eAnnotations xmi:id="_RF6PpGS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1oo3oGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_RF6PpWS6EeSO88P2ztulog" name="short" instanceClassName="short">
+        <eAnnotations xmi:id="_RF6PpmS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_2b9yAGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_RF6Pp2S6EeSO88P2ztulog" name="double" instanceClassName="double">
+        <eAnnotations xmi:id="_RF6PqGS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_5Jo5MGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_RF6PqWS6EeSO88P2ztulog" name="float" instanceClassName="float">
+        <eAnnotations xmi:id="_RF6PqmS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_6Wl0gGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_RF6Pq2S6EeSO88P2ztulog" name="boolean" instanceClassName="boolean">
+        <eAnnotations xmi:id="_RF6PrGS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__jNDUGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_RF6PrWS6EeSO88P2ztulog" name="PrimitiveType1" instanceClassName="PrimitiveType1">
+        <eAnnotations xmi:id="_RF6PrmS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lq7oUGS5EeSO88P2ztulog"/>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_FZY-IGS6EeSO88P2ztulog" name="javaTypes" nsURI="http:///schemas/javaTypes/_FNw88GS6EeSO88P2ztulog/3" nsPrefix="javaTypes">
+      <eAnnotations xmi:id="_FZY-L2S6EeSO88P2ztulog" source="PapyrusVersion">
+        <details xmi:id="_FZY-MGS6EeSO88P2ztulog" key="Version" value="0.0.4"/>
+        <details xmi:id="_FZY-MWS6EeSO88P2ztulog" key="Comment" value=""/>
+        <details xmi:id="_FZY-MmS6EeSO88P2ztulog" key="Copyright" value=""/>
+        <details xmi:id="_FZY-M2S6EeSO88P2ztulog" key="Date" value="2014-11-05"/>
+        <details xmi:id="_FZY-NGS6EeSO88P2ztulog" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_FZY-IWS6EeSO88P2ztulog" name="int" instanceClassName="int">
+        <eAnnotations xmi:id="_FZY-ImS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_0wqGwGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_FZY-I2S6EeSO88P2ztulog" name="long" instanceClassName="long">
+        <eAnnotations xmi:id="_FZY-JGS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1oo3oGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_FZY-JWS6EeSO88P2ztulog" name="short" instanceClassName="short">
+        <eAnnotations xmi:id="_FZY-JmS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_2b9yAGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_FZY-J2S6EeSO88P2ztulog" name="double" instanceClassName="double">
+        <eAnnotations xmi:id="_FZY-KGS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_5Jo5MGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_FZY-KWS6EeSO88P2ztulog" name="float" instanceClassName="float">
+        <eAnnotations xmi:id="_FZY-KmS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_6Wl0gGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_FZY-K2S6EeSO88P2ztulog" name="boolean" instanceClassName="boolean">
+        <eAnnotations xmi:id="_FZY-LGS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__jNDUGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_FZY-LWS6EeSO88P2ztulog" name="PrimitiveType1" instanceClassName="PrimitiveType1">
+        <eAnnotations xmi:id="_FZY-LmS6EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lq7oUGS5EeSO88P2ztulog"/>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_VCvuEWS5EeSO88P2ztulog" name="javaTypes" nsURI="http:///schemas/javaTypes/_VCvuEGS5EeSO88P2ztulog/2" nsPrefix="javaTypes">
+      <eAnnotations xmi:id="_VCvuHmS5EeSO88P2ztulog" source="PapyrusVersion">
+        <details xmi:id="_VCvuH2S5EeSO88P2ztulog" key="Version" value="0.0.3"/>
+        <details xmi:id="_VCvuIGS5EeSO88P2ztulog" key="Comment" value=""/>
+        <details xmi:id="_VCvuIWS5EeSO88P2ztulog" key="Copyright" value=""/>
+        <details xmi:id="_VCvuImS5EeSO88P2ztulog" key="Date" value="2014-11-05"/>
+        <details xmi:id="_VCvuI2S5EeSO88P2ztulog" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_VCvuEmS5EeSO88P2ztulog" name="int" instanceClassName="int">
+        <eAnnotations xmi:id="_VCvuE2S5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_0wqGwGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_VCvuFGS5EeSO88P2ztulog" name="long" instanceClassName="long">
+        <eAnnotations xmi:id="_VCvuFWS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1oo3oGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_VCvuFmS5EeSO88P2ztulog" name="short" instanceClassName="short">
+        <eAnnotations xmi:id="_VCvuF2S5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_2b9yAGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_VCvuGGS5EeSO88P2ztulog" name="double" instanceClassName="double">
+        <eAnnotations xmi:id="_VCvuGWS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_5Jo5MGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_VCvuGmS5EeSO88P2ztulog" name="float" instanceClassName="float">
+        <eAnnotations xmi:id="_VCvuG2S5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_6Wl0gGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_VCvuHGS5EeSO88P2ztulog" name="boolean" instanceClassName="boolean">
+        <eAnnotations xmi:id="_VCvuHWS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__jNDUGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_GdZOQWS5EeSO88P2ztulog" name="javaTypes" nsURI="http:///schemas/javaTypes/_GdZOQGS5EeSO88P2ztulog/1" nsPrefix="javaTypes">
+      <eAnnotations xmi:id="_GdZOTmS5EeSO88P2ztulog" source="PapyrusVersion">
+        <details xmi:id="_GdZOT2S5EeSO88P2ztulog" key="Version" value="0.0.2"/>
+        <details xmi:id="_GdZOUGS5EeSO88P2ztulog" key="Comment" value=""/>
+        <details xmi:id="_GdZOUWS5EeSO88P2ztulog" key="Copyright" value=""/>
+        <details xmi:id="_GdZOUmS5EeSO88P2ztulog" key="Date" value="2014-11-05"/>
+        <details xmi:id="_GdZOU2S5EeSO88P2ztulog" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_GdZOQmS5EeSO88P2ztulog" name="int" instanceClassName="int">
+        <eAnnotations xmi:id="_GdZOQ2S5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_0wqGwGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_GdZORGS5EeSO88P2ztulog" name="long" instanceClassName="long">
+        <eAnnotations xmi:id="_GdZORWS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1oo3oGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_GdZORmS5EeSO88P2ztulog" name="short" instanceClassName="short">
+        <eAnnotations xmi:id="_GdZOR2S5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_2b9yAGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_GdZOSGS5EeSO88P2ztulog" name="double" instanceClassName="double">
+        <eAnnotations xmi:id="_GdZOSWS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_5Jo5MGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_GdZOSmS5EeSO88P2ztulog" name="float" instanceClassName="float">
+        <eAnnotations xmi:id="_GdZOS2S5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_6Wl0gGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_GdZOTGS5EeSO88P2ztulog" name="boolean" instanceClassName="boolean">
+        <eAnnotations xmi:id="_GdZOTWS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__jNDUGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_BompkmS5EeSO88P2ztulog" name="profile" nsURI="http:///schemas/profile/_BompkGS5EeSO88P2ztulog/0" nsPrefix="profile">
+      <eAnnotations xmi:id="_Bompn2S5EeSO88P2ztulog" source="PapyrusVersion">
+        <details xmi:id="_BompoGS5EeSO88P2ztulog" key="Version" value="0.0.1"/>
+        <details xmi:id="_BompoWS5EeSO88P2ztulog" key="Comment" value=""/>
+        <details xmi:id="_BompomS5EeSO88P2ztulog" key="Copyright" value=""/>
+        <details xmi:id="_Bompo2S5EeSO88P2ztulog" key="Date" value="2014-11-05"/>
+        <details xmi:id="_BomppGS5EeSO88P2ztulog" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_Bompk2S5EeSO88P2ztulog" name="int" instanceClassName="int">
+        <eAnnotations xmi:id="_BomplGS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_0wqGwGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_BomplWS5EeSO88P2ztulog" name="long" instanceClassName="long">
+        <eAnnotations xmi:id="_BomplmS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1oo3oGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_Bompl2S5EeSO88P2ztulog" name="short" instanceClassName="short">
+        <eAnnotations xmi:id="_BompmGS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_2b9yAGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_BompmWS5EeSO88P2ztulog" name="double" instanceClassName="double">
+        <eAnnotations xmi:id="_BompmmS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_5Jo5MGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_Bompm2S5EeSO88P2ztulog" name="float" instanceClassName="float">
+        <eAnnotations xmi:id="_BompnGS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_6Wl0gGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EDataType" xmi:id="_BompnWS5EeSO88P2ztulog" name="boolean" instanceClassName="boolean">
+        <eAnnotations xmi:id="_BompnmS5EeSO88P2ztulog" source="http://www.eclipse.org/uml2/2.0.0/UML" references="__jNDUGS4EeSO88P2ztulog"/>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_0wqGwGS4EeSO88P2ztulog" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_1oo3oGS4EeSO88P2ztulog" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_2b9yAGS4EeSO88P2ztulog" name="short"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_5Jo5MGS4EeSO88P2ztulog" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_6Wl0gGS4EeSO88P2ztulog" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="__jNDUGS4EeSO88P2ztulog" name="boolean"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_HfN3oGS5EeSO88P2ztulog" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_PGUL4GS5EeSO88P2ztulog" name="lang">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_WZdpYGS5EeSO88P2ztulog" name="Integer"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_gWZMkGS5EeSO88P2ztulog" name="String">
+        <ownedOperation xmi:id="_t38GAGS5EeSO88P2ztulog" name="length"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_NegrIGS6EeSO88P2ztulog" name="Long"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_RsRhgGS5EeSO88P2ztulog" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_32A4sGS5EeSO88P2ztulog" name="Date"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_6i9nIGS5EeSO88P2ztulog" name="Collection"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lq7oUGS5EeSO88P2ztulog" name="PrimitiveType1"/>
+</uml:Profile>
