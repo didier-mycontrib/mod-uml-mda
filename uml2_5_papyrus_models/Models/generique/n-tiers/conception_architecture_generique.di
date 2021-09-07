@@ -48,6 +48,21 @@
         <children>
           <emfPageIdentifier href="conception_architecture_generique.notation#_dl_jUCB7EeWFmdm0OQex0w"/>
         </children>
+        <children>
+          <emfPageIdentifier href="conception_architecture_generique.notation#_jX8NsHAMEeS2AqJ3zIZXSA"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="conception_architecture_generique.notation#_Mh74IHCBEeSmcbzV6P-1Ow"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="conception_architecture_generique.notation#_r2nUoHCEEeSmcbzV6P-1Ow"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="conception_architecture_generique.notation#_s4RwcHFJEeS5JrMDPoa1Kw"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="conception_architecture_generique.notation#_d0TSYHOjEeSXKe5zJVThGw"/>
+        </children>
       </children>
     </windows>
   </sashModel>

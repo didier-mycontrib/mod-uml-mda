@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateXsd" name="myAcceleoUmlGen">
-    <property name="ECLIPSE_HOME" value="../../../../../Prog/UML/MarsPapyrus/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../UML_WKSP/my_uml2_5_papyrus_models_wksp"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../Prog/UML/MarsPapyrus/eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../../tp/ECLIPSE_WKSP/UML"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="myAcceleoUmlGen.libraryclasspath">
@@ -10,6 +10,7 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/javax.annotation_1.2.0.v201401042248.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/javax.inject_1.0.0.v20091030.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.10.102.v20160118-1700.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.fx.osgi_2.3.0.201603030603.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi.compatibility.state_1.0.100.v20150402-1551.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.common_3.7.0.v20150402-1709.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.jobs_3.7.0.v20150330-2103.jar"/>
