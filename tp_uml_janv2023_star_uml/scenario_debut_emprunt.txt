@@ -1,0 +1,6 @@
+1.   identifier emprunteur (voir sous U.C.)
+2.  vérifier droit à emprunter (voir sous U.C.)
+3.  ......
+4  renseigner l'identifiant du livre à emprunter
+5. enregistrer les détails de l'emprunt   (date , emprunteur, livre emprunté) en base 
+6. générer récapitulatif à l'écran ou bien sur fiche ...

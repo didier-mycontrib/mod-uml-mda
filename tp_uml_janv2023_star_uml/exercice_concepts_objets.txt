@@ -1,0 +1,8 @@
+Maison comporte des Pieces
+Piece
+Cuisine héritant de Piece
+SalleDeBain héritant de Piece et SalleDeBain comporte Baignoire
+Chambre héritant de Piece
+Baignoire
+Personne
+....
