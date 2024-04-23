@@ -1,0 +1,71 @@
+Rappel des concepts Objet et d'UML
+================================
+• Le cycle de vie d'un projet en Objet.  page 25 (cycle itératif et incrémental)
+• Les architectures.   pages 63 (objets) , page 70 (granularité) , page 72 (points d'entrées) + CONCEPTS OBJETS
+• Le processus unifié. page 137 (UP , bonnes pratiques communes)
+
+
++ repères (liés à l'urbanisation) : page 55 .
+
+Analyser le besoin
+==================
+• Analyser et formuler le besoin : 
+    --> a) répérer dans le cahier des charges les éléments fondamentaux (qui reviennent souvent , qui sont mis en avant, ...):
+            * les sujets (acteurs/utilisateurs potentiels) à par exemple souligner en vert ou en trait plein
+            * les noms propres et "COD" (classes potentielles) à par exemple souligner en bleu ou en double traits pleins
+            * les verbes (activités/tâches/traitements potentielles)  à par exemple souligner en rouge ou en pointillé
+        b) au sens "utilisation d'UML" , reformuler cela sous forme de diagramme(s) de "cas d'utilisation"
+            où les sujets sont des acteurs , les "verbes + COD" des noms de cas d'utisations .
+           NB1: ne pas hésiter à utiliser des synonymes (si c'est plus parlant).
+           NB2: ce/ces diagrammes de "Cas d'utilisation" seront à affiner ultérieurement
+           (de manière progressive avec "ajustements rectificatifs" à prévoir)
+        
+• Plan de gestion des exigences
+     ---> mettre en avant :
+        * le "MVP (Minimum Viable Product) : fonctionnalités fondamentales/minimum attendues/exigées le plus tôt possible
+        * tous les éléments "absolument <<indispensables>>" (sans ambiguité) avec une idéale priorisation ("--" , "-" , "-/+",  "+" , "++" ) si possible
+        * mentionner quels sont les "éléments simplement suggérés" (simples propositions , idées à débatre , plusieurs mises en ouvre possibles, ...)
+          via un ou plusieurs qualificatifs (ex: <<suggestion>> ou <<proposition>> ou ...).
+
+• Comprendre les besoins des parties prenantes.
+    --->
+
+
+Définir le système
+=================
+• La vision du projet.
+• Documenter les cas d'utilisation.
+• Eviter les pièges pour les cas d'utilisation.
+
+
+Gérer le périmètre
+==================
+• Poser des priorités sur les cas d'utilisation.
+• Déterminer le périmètre du système.
+• Contrôler les changements.
+
+
+Affiner la modélisation des exigences
+===================================
+• Définir le contenu de la spécification.
+• Spécifier les exigences fonctionnelles et non fonctionnelles.
+• Décrire l'interface utilisateur, les protocoles, les contraintes.
+• Qualités requises d'une spécification.
+
+Analyse, conception et architecture
+==================================
+• Les rôles.
+• Les concepts clés.
+• L'architecture logicielle dans le contexte de l'analyse et de la conception.
+
+
+Analyse des cas d'utilisation
+==============================
+• Identification des cas d'utilisation.
+• Allocation des responsabilités.
+• Modélisation des relations entre classes : associations et agrégations.
+
+
+Créer des modèles de qualité
+============================
+• Les « patterns » à disposition.
